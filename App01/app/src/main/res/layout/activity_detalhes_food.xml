@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DetalhesFoodActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/detalhe_imagem"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/img01_tony_romas"
+        >
+
+        <ImageView
+            android:id="@+id/detalhe_seta"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_seta_baseline_arrow_back_24"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tony Romas"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="false"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pratos Principais"
+        android:textSize="22sp"
+        android:textColor="#4A4949"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detalhe_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</LinearLayout>

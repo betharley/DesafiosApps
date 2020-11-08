@@ -21,46 +21,28 @@
         android:orientation="vertical"
         >
         <ImageView
-            android:id="@+id/item_imagem"
+            android:id="@+id/item_detalhe_imagem"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/img01_tony_romas"
+            android:layout_height="120dp"
+            android:src="@drawable/item_detalhe"
             android:scaleType="centerCrop"
             />
 
         <TextView
-            android:id="@+id/item_titulo"
+            android:id="@+id/item_detalhe_titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:textColor="#050505"
-            android:layout_marginLeft="16dp"
+            android:textColor="#494747"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Titulo do anuncio"
             android:textStyle="bold"
             android:textAllCaps="false"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
             />
 
-        <TextView
-            android:id="@+id/item_endereco"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="#474646"
-            android:layout_marginLeft="16dp"
-            android:text="Endereço que esta servindo o anuncio"
-            android:textAllCaps="false"
-            />
-
-        <TextView
-            android:id="@+id/item_status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="#474646"
-            android:layout_marginLeft="16dp"
-            android:text="Horario de atendimento"
-            android:textAllCaps="false"
-            />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

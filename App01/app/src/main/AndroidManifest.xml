@@ -9,12 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".FoodActivity"></activity>
         <activity
-            android:name=".RegisterActivity"
-            android:label="Register" />
-        <activity
-            android:name=".SplashActivity"
+            android:name=".activity.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,8 +20,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.HomeActivity"
             android:label="Digital House Foods" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="Register" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="Digital House Foods" />
+        <activity
+            android:name=".activity.DetalhesFoodActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

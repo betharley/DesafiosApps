@@ -9,26 +9,27 @@ import androidx.recyclerview.widget.RecyclerView
 import com.betharley.myapplication._interface.ClickListener
 import com.betharley.myapplication.R
 import com.betharley.myapplication.model.Anuncio
+import com.betharley.myapplication.model.Food
 
-class AdaptadorAnuncio(lista:ArrayList<Anuncio>, var clickListener: ClickListener):
-    RecyclerView.Adapter<AdaptadorAnuncio.ViewHolder>() {
+class AdaptadorDetalhe(lista:ArrayList<Food>, var clickListener: ClickListener):
+    RecyclerView.Adapter<AdaptadorDetalhe.ViewHolder>() {
 
-    var lista: ArrayList<Anuncio> = ArrayList<Anuncio>()
+    var lista: ArrayList<Food> = ArrayList<Food>()
 
     init {
         this.lista = lista
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.item_food, parent, false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.item_food_detalhe, parent, false)
         var viewHolder = ViewHolder(view, clickListener)
         return viewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var anuncio: Anuncio = lista.get(position)
+        var food: Food = lista.get(position)
 
-        holder.bind( anuncio )
+        holder.bind( food )
         //holder.imagemView.setImageResource( anuncio.imagem )
     }
 
@@ -39,26 +40,20 @@ class AdaptadorAnuncio(lista:ArrayList<Anuncio>, var clickListener: ClickListene
     class ViewHolder(view: View, listener: ClickListener): RecyclerView.ViewHolder(view), View.OnClickListener {
         var imagemView: ImageView
         var titulo: TextView
-        var endereco: TextView
-        var status: TextView
 
         var listener: ClickListener? = null
 
         init {
-            imagemView = view.findViewById(R.id.item_imagem)
-            titulo = view.findViewById(R.id.item_titulo)
-            endereco = view.findViewById(R.id.item_endereco)
-            status = view.findViewById(R.id.item_status)
+            imagemView = view.findViewById(R.id.item_detalhe_imagem)
+            titulo = view.findViewById(R.id.item_detalhe_titulo)
 
             this.listener = listener
             view.setOnClickListener(this)
         }
 
-        fun bind(anuncio: Anuncio){
-            this.imagemView.setImageResource( anuncio.imagem)
-            this.titulo.setText( anuncio.titulo )
-            this.endereco.setText( anuncio.endereco )
-            this.status.setText( anuncio.status )
+        fun bind(food: Food){
+            this.imagemView.setImageResource( food.imagem)
+            this.titulo.setText( food.titulo )
         }
 
         override fun onClick(view: View?) {

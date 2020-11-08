@@ -1,6 +1,8 @@
 package com.betharley.myapplication.model
 
-class Anuncio(imagem:Int, titulo:String, endereco:String, status:String) {
+import java.io.Serializable
+
+class Anuncio(imagem:Int, titulo:String, endereco:String, status:String): Serializable {
     var imagem: Int = 0
     var titulo: String
     var endereco: String
