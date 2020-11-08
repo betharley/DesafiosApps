@@ -37,6 +37,7 @@
                 android:paddingBottom="16dp"
                 android:textColor="#1866A3"
                 android:textSize="18sp"
+                android:id="@+id/login_email_edit"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -58,6 +59,7 @@
                 android:paddingBottom="16dp"
                 android:textColor="#1866A3"
                 android:textSize="18sp"
+                android:id="@+id/login_password_edit"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
