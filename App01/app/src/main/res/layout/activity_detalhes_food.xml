@@ -13,8 +13,15 @@
         android:id="@+id/detalhe_imagem"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/img01_tony_romas"
         >
+
+        <ImageView
+            android:id="@+id/detalhe_imagem_fundo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/img01_tony_romas"
+            android:scaleType="centerCrop"
+            />
 
         <ImageView
             android:id="@+id/detalhe_seta"
@@ -26,6 +33,7 @@
             />
 
         <TextView
+            android:id="@+id/detalhe_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tony Romas"
@@ -41,6 +49,7 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/detalhe_pratos_principais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pratos Principais"
@@ -49,6 +58,7 @@
         android:textStyle="bold"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
         />
 
     <androidx.recyclerview.widget.RecyclerView
