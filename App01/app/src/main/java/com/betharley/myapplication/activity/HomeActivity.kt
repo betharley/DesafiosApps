@@ -43,10 +43,10 @@ class HomeActivity : AppCompatActivity() {
 
     fun criarLista(){
         listaAnuncios = ArrayList<Anuncio>();
-        listaAnuncios.add( Anuncio(R.drawable.img01_tony_romas, "Tony Roma's", "Av. Lavandisca, 717 - Indianapolis, São Paulo", "Fecha as 22:00" ) )
-        listaAnuncios.add( Anuncio(R.drawable.img02_aoyama_moema, "Aoyama - Moema", "Alameda dos Arapaes, 532 - Moema", "Fecha as 00:00" ) )
-        listaAnuncios.add( Anuncio(R.drawable.img03_outback_moema, "Outback - Moema", "Av. Moaci, 187, 187 - Moema, São Paulo", "Fecha as 00:00" ) )
-        listaAnuncios.add( Anuncio(R.drawable.img04_si_sinor, "Si Senor!", "Alameda Jauaperi, 626 - Moema", "Alameda Jauaperi, 626 - Moema" ) )
+        listaAnuncios.add( Anuncio(R.drawable.iv_tonyroma, "Tony Roma's", "Av. Lavandisca, 717 - Indianapolis, São Paulo", "Fecha as 22:00" ) )
+        listaAnuncios.add( Anuncio(R.drawable.iv_aoyama, "Aoyama - Moema", "Alameda dos Arapaes, 532 - Moema", "Fecha as 00:00" ) )
+        listaAnuncios.add( Anuncio(R.drawable.iv_outback, "Outback - Moema", "Av. Moaci, 187, 187 - Moema, São Paulo", "Fecha as 00:00" ) )
+        listaAnuncios.add( Anuncio(R.drawable.iv_senor, "Si Senor!", "Alameda Jauaperi, 626 - Moema", "Alameda Jauaperi, 626 - Moema" ) )
     }
 
 }

@@ -70,18 +70,18 @@ class DetalhesFoodActivity : AppCompatActivity() {
     }
     fun criarLista(){
         listaFood = ArrayList<Food>();
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
-        listaFood.add( Food(R.drawable.item_detalhe, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
+        listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))
 
     }
 }

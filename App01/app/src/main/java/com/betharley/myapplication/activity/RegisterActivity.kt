@@ -17,7 +17,6 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var register_password: TextInputEditText
     lateinit var register_password_repeat: TextInputEditText
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -29,43 +28,39 @@ class RegisterActivity : AppCompatActivity() {
         register_password = findViewById(R.id.register_password_edit)
         register_password_repeat = findViewById(R.id.register_password_repeat_edit)
 
-
         register_register.setOnClickListener {
-            val intent: Intent = Intent(applicationContext, HomeActivity::class.java)
-            startActivity( intent )
+            registrarUsuario()
         }
     }
 
     fun registrarUsuario(){
-        //var usuario: Usuario = Usuario("", "", "")
 
-        var nome = register_name_edit.text.toString()
-        var email = register_email_edit.text.toString()
-        var password = register_password.text.toString()
-        var password_repeat = register_password_repeat_edit.text.toString()
+        var nome = register_name_edit.text.toString().trim()
+        var email = register_email_edit.text.toString().trim()
+        var password = register_password_edit.text.toString().trim()
+        var password_repeat = register_password_repeat_edit.text.toString().trim()
 
-        if( nome.isEmpty() || email.equals("")){
+        if( nome.isEmpty() || nome.equals("")){
             register_name_edit.error = "Preencha o nome"
         }else
         if( email.isEmpty() || email.equals("")){
             register_email_edit.error = "Preencha o email"
         }else
         if( password.isEmpty() || password.equals("")){
-            register_password.error = "Preencha o password"
+            register_password_edit.error = "Preencha o password"
         }else
-        if( password_repeat.isEmpty() || password.equals("")){
-            register_password_repeat_edit.error = "Preencha o password"
+        if( password_repeat.isEmpty() || password_repeat.equals("")){
+            register_password_repeat_edit.error = "Repita o password"
         }
         else{
-
             if( password.equals(password_repeat) ){
                 val intent: Intent = Intent(applicationContext, HomeActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity( intent )
                 finish()
             }else{
                 register_password_repeat_edit.error = "As senhas estão diferentes"
             }
-
         }
     }
 }

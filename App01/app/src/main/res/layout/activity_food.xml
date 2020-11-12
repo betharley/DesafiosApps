@@ -17,7 +17,7 @@
             android:id="@+id/food_imagem_fundo"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:src="@drawable/img01_tony_romas"
+            android:src="@drawable/iv_tonyroma"
             android:scaleType="centerCrop"
             />
 

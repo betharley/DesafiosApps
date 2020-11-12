@@ -34,7 +34,6 @@
         <activity android:name=".activity.FoodActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
-
     </application>
 
 </manifest>

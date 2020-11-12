@@ -8,11 +8,6 @@
     android:orientation="vertical"
     tools:context=".activity.RegisterActivity">
 
-<!--    <include-->
-<!--        layout="@layout/my_toolbar"-->
-<!--        />-->
-
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -24,7 +19,7 @@
             android:id="@+id/register_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="Name"
             android:textColorHint="#999"
             android:layout_marginTop="20dp"
             >
@@ -32,7 +27,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
                 android:textColor="#1866A3"
@@ -113,7 +108,6 @@
             android:layout_weight="1"
             />
 
-
         <Button
             android:id="@+id/register_register"
             android:layout_width="match_parent"
@@ -124,8 +118,8 @@
             android:text="REGISTER"
             android:textColor="#FFF"
             android:background="#FF5252"
-            android:enabled="false"
             android:padding="8dp"
+            android:enabled="true"
             />
 
 

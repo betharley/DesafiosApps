@@ -1,9 +1,11 @@
 package com.betharley.myapplication.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.betharley.myapplication.R
 import com.google.android.material.textfield.TextInputEditText
 
@@ -25,18 +27,34 @@ class LoginActivity : AppCompatActivity() {
 
         login_register.setOnClickListener {
             var intent: Intent = Intent(applicationContext, RegisterActivity::class.java)
-            startActivity( intent )
+            startActivity(intent)
         }
 
         login_login.setOnClickListener {
             logarUsuario()
         }
+
+        //TESTES PARA SER REALIZADOS DEPOIS
+        login_email_edit.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable) {}
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                //validarDados()
+            }
+        })
+        login_password_edit.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable) {}
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                //validarDados()
+            }
+        })
     }
 
 
     fun logarUsuario(){
-        var email = login_email_edit.text.toString()
-        var password = login_password_edit.text.toString()
+        var email = login_email_edit.text.toString().trim()
+        var password = login_password_edit.text.toString().trim()
 
         if( email.isEmpty() || email.equals("")){
             login_email_edit.error = "Preencha o email"
@@ -45,8 +63,20 @@ class LoginActivity : AppCompatActivity() {
             login_password_edit.error = "Preencha a senha"
         }else{
             var intent: Intent = Intent(applicationContext, HomeActivity::class.java)
-            startActivity( intent )
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
             finish()
+        }
+    }
+
+    fun validarDados(){
+        val email = login_email_edit.text.toString().trim()
+        val password = login_password_edit.text.toString().trim()
+
+        if( !email.isEmpty() && !password.isEmpty() ){
+            login_login.isEnabled = true
+        }else{
+            login_register.isEnabled = false
         }
     }
 
