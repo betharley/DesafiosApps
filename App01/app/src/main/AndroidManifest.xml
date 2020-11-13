@@ -28,10 +28,10 @@
             android:name=".activity.LoginActivity"
             android:label="Digital House Foods" />
         <activity
-            android:name=".activity.DetalhesFoodActivity"
+            android:name=".activity.PratosActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <activity android:name=".activity.FoodActivity"
+        <activity android:name=".activity.DetalheCardapioActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
     </application>

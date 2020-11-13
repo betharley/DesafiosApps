@@ -1,16 +1,13 @@
 package com.betharley.myapplication.activity
 
-import android.media.Image
-import android.media.MediaMetadata
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
 import com.betharley.myapplication.R
 import com.betharley.myapplication.model.Food
 
-class FoodActivity : AppCompatActivity() {
+class DetalheCardapioActivity : AppCompatActivity() {
     lateinit var food_seta: ImageView
     lateinit var food: Food
 
@@ -21,10 +18,10 @@ class FoodActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_food)
+        setContentView(R.layout.activity_detalhes_cardapio)
 
         //PEGA O OBJETO QUE VEIO DA OUTRA ACTIVITY
-        food = intent.extras!!.getSerializable("FOOD") as Food
+        food = intent.extras!!.getSerializable(getString(R.string.FOOD)) as Food
 
         //REFERNCIA OS ELEMENTOS DO LAYOUT
         food_seta = findViewById(R.id.food_seta) as ImageView

@@ -32,7 +32,7 @@ class HomeActivity : AppCompatActivity() {
         adaptadorAnuncio = AdaptadorAnuncio(listaAnuncios, object: ClickListener {
             override fun onClick(view: View, position: Int) {
                 var anuncio: Anuncio = listaAnuncios.get(position)
-                var intent: Intent = Intent(applicationContext, DetalhesFoodActivity::class.java)
+                var intent: Intent = Intent(applicationContext, PratosActivity::class.java)
                 intent.putExtra(getString(R.string.ANUNCIO), anuncio)
                 startActivity( intent )
             }

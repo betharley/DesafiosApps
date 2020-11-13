@@ -11,12 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.betharley.myapplication.R
 import com.betharley.myapplication._interface.ClickListener
-import com.betharley.myapplication.adapter.AdaptadorAnuncio
 import com.betharley.myapplication.adapter.AdaptadorDetalhe
 import com.betharley.myapplication.model.Anuncio
 import com.betharley.myapplication.model.Food
 
-class DetalhesFoodActivity : AppCompatActivity() {
+class PratosActivity : AppCompatActivity() {
     lateinit var detalhe_seta: ImageView
     lateinit var anuncio: Anuncio
     lateinit var detalhe_imagem_fundo: ImageView
@@ -29,13 +28,14 @@ class DetalhesFoodActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detalhes_food)
+        setContentView(R.layout.activity_pratos)
 
         //REFERNCIA OS ELEMENTOS DO LAYOUT
         detalhe_imagem_fundo = findViewById(R.id.detalhe_imagem_fundo) as ImageView
         detalhe_titulo = findViewById(R.id.detalhe_titulo) as TextView
         detalhe_seta = findViewById(R.id.detalhe_seta) as ImageView
         anuncio = intent.extras!!.getSerializable(getString(R.string.ANUNCIO)) as Anuncio
+        //var danuncio = intent.extras!!.getString("Key")
 
         criarLista()
 
@@ -48,12 +48,12 @@ class DetalhesFoodActivity : AppCompatActivity() {
             override fun onClick(view: View, position: Int) {
                 var food: Food = listaFood.get(position)
                 //Toast.makeText(applicationContext, ""+anuncio.titulo, Toast.LENGTH_SHORT).show()
-                var intent: Intent = Intent(applicationContext, FoodActivity::class.java)
+                var intent: Intent = Intent(applicationContext, DetalheCardapioActivity::class.java)
                 intent.putExtra(getString(R.string.FOOD), food)
                 startActivity( intent )
             }
 
-        })
+        }, applicationContext)
 
         recyclerView.adapter = adaptadorFood
 
@@ -64,12 +64,15 @@ class DetalhesFoodActivity : AppCompatActivity() {
             detalhe_titulo.text = anuncio.titulo
         }
 
-        detalhe_imagem_fundo
-
         detalhe_seta.setOnClickListener {
             finish()
         }
     }
+
+//    override fun onBackPressed() {
+//        super.onBackPressed()
+//    }
+
     //ADICIONA ELEMENTOS NA LISTA
     fun criarLista(){
         listaFood = ArrayList<Food>();

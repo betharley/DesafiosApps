@@ -1,5 +1,7 @@
 package com.betharley.myapplication.adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,10 +10,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.betharley.myapplication._interface.ClickListener
 import com.betharley.myapplication.R
+import com.betharley.myapplication.activity.DetalheCardapioActivity
 import com.betharley.myapplication.model.Anuncio
 import com.betharley.myapplication.model.Food
 
-class AdaptadorDetalhe(lista:ArrayList<Food>, var clickListener: ClickListener):
+class AdaptadorDetalhe(lista:ArrayList<Food>, var clickListener: ClickListener, var context: Context):
     RecyclerView.Adapter<AdaptadorDetalhe.ViewHolder>() {
 
     var lista: ArrayList<Food> = ArrayList<Food>()
@@ -31,6 +34,11 @@ class AdaptadorDetalhe(lista:ArrayList<Food>, var clickListener: ClickListener):
 
         holder.bind( food )
         //holder.imagemView.setImageResource( anuncio.imagem )
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, DetalheCardapioActivity::class.java )
+
+
+        }
     }
 
     override fun getItemCount(): Int {
