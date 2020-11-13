@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#6674C4</color>
+    <color name="cinzaClaro">#999</color>
+    <color name="AzulEscuro">#1866A3</color>
+    <color name="branco">#FFF</color>
+    <color name="vermelhoClaro">#FF5252</color>
+    <color name="CinzaClarinho">#8492A6</color>
+    <color name="cinzaEscuro">#4A4949</color>
+    <color name="pretoClaro">#050505</color>
 </resources>

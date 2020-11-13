@@ -2,4 +2,43 @@
     <string name="app_name">My Application</string>
     <string name="salada">Salada com molho Gengibre</string>
     <string name="food_descricao">Três hipóteses concorrentes foram apresentadas para a dinastia à qual Xexi pertenceu. Três hipóteses concorrentes foram apresentadas para a dinastia à qual Xexi pertenceu. Três hipóteses concorrentes foram apresentadas para a dinastia à qual Xexi pertenceu.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">LOG IN</string>
+    <string name="or">OR</string>
+    <string name="register">REGISTER</string>
+    <string name="name">Name</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="tony_romas">Tony Romas</string>
+    <string name="pratos_principais">Pratos Principais</string>
+    <string name="endere_o_que_esta_servindo_o_anuncio">Endereço que esta servindo o anuncio</string>
+    <string name="horario_de_atendimento">Horario de atendimento</string>
+    <string name="titulo_do_anuncio">Titulo do anuncio</string>
+
+    <string name="ANUNCIO">ANUNCIO</string>
+    <string name="FOOD">FOOD</string>
+
+    <string name="preenchaEmail">Preencha o email</string>
+    <string name="preenchaSenha">Preencha a senha</string>
+    <string name="preenchaNome">Preencha o nome</string>
+    <string name="preenchaSenhaRepetida">Repita a senha</string>
+    <string name="senhasDiferentes">As senhas estão diferentes</string>
+
+    <string name="TonyRomas">Tony Romas</string>
+    <string name="TonyRomasEndereco">Av. Lavandisca, 717 - Indianapolis, São Paulo</string>
+
+    <string name="AoyamaMoema">Aoyama - Moema</string>
+    <string name="AoyamaMoemaEndereco">Alameda dos Arapaes, 532 - Moema</string>
+
+    <string name="OutbackMoema">Outback - Moema</string>
+    <string name="OutbackMoemaEndereco">Av. Moaci, 187, 187 - Moema, São Paulo</string>
+
+    <string name="SiSenor">Si Senor!</string>
+    <string name="SiSenorEndereco">Alameda Jauaperi, 626 - Moema</string>
+
+    <string name="Fecha22">Fecha as 22:00</string>
+    <string name="Fecha00">Fecha as 00:00</string>
+    <string name="Fecha01">Fecha as 01:00</string>
+
+
 </resources>

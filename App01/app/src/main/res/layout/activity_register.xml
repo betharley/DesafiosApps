@@ -12,27 +12,28 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+        android:padding="@dimen/size16dp"
         >
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/register_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            android:textColorHint="#999"
-            android:layout_marginTop="20dp"
+            android:hint="@string/name"
+            android:textColorHint="@color/cinzaClaro"
+            android:layout_marginTop="@dimen/size20dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:textColor="#1866A3"
-                android:textSize="18sp"
+                android:paddingTop="@dimen/size16dp"
+                android:paddingBottom="@dimen/size16dp"
+                android:textColor="@color/AzulEscuro"
+                android:textSize="@dimen/size18sp"
                 android:id="@+id/register_name_edit"
+                android:textAllCaps="false"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -41,19 +42,20 @@
             android:id="@+id/register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textColorHint="#999"
-            android:layout_marginTop="10dp"
+            android:hint="@string/email"
+            android:textColorHint="@color/cinzaClaro"
+            android:layout_marginTop="@dimen/size10dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:textColor="#1866A3"
+                android:paddingTop="@dimen/size16dp"
+                android:paddingBottom="@dimen/size16dp"
+                android:textColor="@color/AzulEscuro"
                 android:id="@+id/register_email_edit"
+                android:textAllCaps="false"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -62,20 +64,21 @@
             android:id="@+id/register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:textColorHint="#999"
-            android:layout_marginTop="10dp"
+            android:hint="@string/password"
+            android:textColorHint="@color/cinzaClaro"
+            android:layout_marginTop="@dimen/size10dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:textColor="#1866A3"
-                android:textSize="18sp"
+                android:paddingTop="@dimen/size16dp"
+                android:paddingBottom="@dimen/size16dp"
+                android:textColor="@color/AzulEscuro"
+                android:textSize="@dimen/size18sp"
                 android:id="@+id/register_password_edit"
+                android:textAllCaps="false"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -84,27 +87,28 @@
             android:id="@+id/register_password_repeat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Repeat password"
-            android:textColorHint="#999"
-            android:layout_marginTop="10dp"
+            android:hint="@string/repeat_password"
+            android:textColorHint="@color/cinzaClaro"
+            android:layout_marginTop="@dimen/size10dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:textColor="#1866A3"
-                android:textSize="18sp"
+                android:paddingTop="@dimen/size16dp"
+                android:paddingBottom="@dimen/size16dp"
+                android:textColor="@color/AzulEscuro"
+                android:textSize="@dimen/size18sp"
                 android:id="@+id/register_password_repeat_edit"
+                android:textAllCaps="false"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             />
 
@@ -114,11 +118,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="true"
-            android:textSize="16sp"
-            android:text="REGISTER"
-            android:textColor="#FFF"
-            android:background="#FF5252"
-            android:padding="8dp"
+            android:textSize="@dimen/size16sp"
+            android:text="@string/register"
+            android:textColor="@color/branco"
+            android:background="@color/vermelhoClaro"
+            android:padding="@dimen/size8dp"
             android:enabled="true"
             />
 

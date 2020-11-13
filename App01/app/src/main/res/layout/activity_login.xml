@@ -8,36 +8,32 @@
     android:orientation="vertical"
     tools:context=".activity.LoginActivity">
 
-<!--    <include-->
-<!--        layout="@layout/my_toolbar"-->
-<!--        />-->
-
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+        android:padding="@dimen/size16dp"
         >
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textColorHint="#999"
-            android:layout_marginTop="30dp"
+            android:hint="@string/email"
+            android:textColorHint="@color/cinzaClaro"
+            android:layout_marginTop="@dimen/size30dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:textColor="#1866A3"
-                android:textSize="18sp"
+                android:paddingTop="@dimen/size16dp"
+                android:paddingBottom="@dimen/size16dp"
+                android:textColor="@color/AzulEscuro"
+                android:textSize="@dimen/size18sp"
                 android:id="@+id/login_email_edit"
+                android:textAllCaps="false"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -46,20 +42,21 @@
             android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:textColorHint="#999"
-            android:layout_marginTop="10dp"
+            android:hint="@string/password"
+            android:textColorHint="@color/cinzaClaro"
+            android:layout_marginTop="@dimen/size10dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:textColor="#1866A3"
-                android:textSize="18sp"
+                android:paddingTop="@dimen/size16dp"
+                android:paddingBottom="@dimen/size16dp"
+                android:textColor="@color/AzulEscuro"
+                android:textSize="@dimen/size18sp"
                 android:id="@+id/login_password_edit"
+                android:textAllCaps="false"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -70,22 +67,22 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="true"
-            android:textSize="16sp"
-            android:text="LOG IN"
-            android:textColor="#FFF"
-            android:background="#FF5252"
-            android:layout_marginTop="60dp"
+            android:textSize="@dimen/size18sp"
+            android:text="@string/log_in"
+            android:textColor="@color/branco"
+            android:background="@color/vermelhoClaro"
+            android:layout_marginTop="@dimen/size60dp"
             android:enabled="true"
-            android:padding="8dp"
+            android:padding="@dimen/size10dp"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OR"
-            android:textSize="17sp"
+            android:text="@string/or"
+            android:textSize="@dimen/size18sp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="@dimen/size50dp"
             />
 
         <Button
@@ -94,13 +91,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAllCaps="true"
-            android:textSize="16sp"
-            android:text="REGISTER"
-            android:textColor="#FFF"
-            android:background="#8492A6"
-            android:layout_marginTop="100dp"
+            android:textSize="@dimen/size18sp"
+            android:text="@string/register"
+            android:textColor="@color/branco"
+            android:background="@color/CinzaClarinho"
+            android:layout_marginTop="@dimen/size100dp"
             android:enabled="true"
-            android:padding="8dp"
+            android:padding="@dimen/size10dp"
             />
 
 

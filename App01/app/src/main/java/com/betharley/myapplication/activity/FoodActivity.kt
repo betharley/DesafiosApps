@@ -23,8 +23,10 @@ class FoodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
 
+        //PEGA O OBJETO QUE VEIO DA OUTRA ACTIVITY
         food = intent.extras!!.getSerializable("FOOD") as Food
 
+        //REFERNCIA OS ELEMENTOS DO LAYOUT
         food_seta = findViewById(R.id.food_seta) as ImageView
         food_imagem = findViewById(R.id.food_imagem_fundo) as ImageView
         food_titulo = findViewById(R.id.food_titulo) as TextView

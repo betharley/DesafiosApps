@@ -31,10 +31,11 @@ class DetalhesFoodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhes_food)
 
+        //REFERNCIA OS ELEMENTOS DO LAYOUT
         detalhe_imagem_fundo = findViewById(R.id.detalhe_imagem_fundo) as ImageView
         detalhe_titulo = findViewById(R.id.detalhe_titulo) as TextView
         detalhe_seta = findViewById(R.id.detalhe_seta) as ImageView
-        anuncio = intent.extras!!.getSerializable("ANUNCIO") as Anuncio
+        anuncio = intent.extras!!.getSerializable(getString(R.string.ANUNCIO)) as Anuncio
 
         criarLista()
 
@@ -42,12 +43,13 @@ class DetalhesFoodActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.detalhe_recyclerView)
         recyclerView.layoutManager = layoutManager
 
+        //CLIQUE NO ITEM DO RECYCLER VIEW PARA ABRIR UMA NOVA TELA
         adaptadorFood = AdaptadorDetalhe(listaFood, object: ClickListener {
             override fun onClick(view: View, position: Int) {
                 var food: Food = listaFood.get(position)
                 //Toast.makeText(applicationContext, ""+anuncio.titulo, Toast.LENGTH_SHORT).show()
                 var intent: Intent = Intent(applicationContext, FoodActivity::class.java)
-                intent.putExtra("FOOD", food)
+                intent.putExtra(getString(R.string.FOOD), food)
                 startActivity( intent )
             }
 
@@ -68,6 +70,7 @@ class DetalhesFoodActivity : AppCompatActivity() {
             finish()
         }
     }
+    //ADICIONA ELEMENTOS NA LISTA
     fun criarLista(){
         listaFood = ArrayList<Food>();
         listaFood.add( Food(R.drawable.iv_aoyama, getString(R.string.salada), getString(R.string.food_descricao) ))

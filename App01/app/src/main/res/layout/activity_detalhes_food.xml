@@ -12,23 +12,23 @@
     <RelativeLayout
         android:id="@+id/detalhe_imagem"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="@dimen/size250dp"
         >
 
         <ImageView
             android:id="@+id/detalhe_imagem_fundo"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="@dimen/size250dp"
             android:src="@drawable/iv_tonyroma"
             android:scaleType="centerCrop"
             />
 
         <ImageView
             android:id="@+id/detalhe_seta"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="@dimen/size50dp"
+            android:layout_height="@dimen/size50dp"
             android:src="@drawable/ic_seta_baseline_arrow_back_24"
-            android:padding="10dp"
+            android:padding="@dimen/size10dp"
             android:scaleType="centerCrop"
             />
 
@@ -36,14 +36,14 @@
             android:id="@+id/detalhe_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tony Romas"
+            android:text="@string/tony_romas"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="false"
             android:textAllCaps="false"
             android:textStyle="bold"
-            android:textColor="#FFF"
-            android:textSize="25sp"
-            android:layout_marginLeft="20dp"
+            android:textColor="@color/branco"
+            android:textSize="@dimen/size25sp"
+            android:layout_marginStart="@dimen/size20dp"
             />
 
     </RelativeLayout>
@@ -52,13 +52,13 @@
         android:id="@+id/detalhe_pratos_principais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pratos Principais"
+        android:text="@string/pratos_principais"
         android:textSize="22sp"
-        android:textColor="#4A4949"
+        android:textColor="@color/cinzaEscuro"
         android:textStyle="bold"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="@dimen/size16dp"
+        android:layout_marginTop="@dimen/size16dp"
+        android:layout_marginRight="@dimen/size16dp"
         />
 
     <androidx.recyclerview.widget.RecyclerView

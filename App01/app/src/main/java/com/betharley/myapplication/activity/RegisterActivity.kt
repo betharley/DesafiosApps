@@ -21,8 +21,8 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        //REFERNCIA OS ELEMENTOS DO LAYOUT
         register_register = findViewById<Button>(R.id.register_register) as Button
-
         register_name = findViewById(R.id.register_name_edit)
         register_email = findViewById(R.id.register_email_edit)
         register_password = findViewById(R.id.register_password_edit)
@@ -33,6 +33,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+    //CADASTRA O USUARIO
     fun registrarUsuario(){
 
         var nome = register_name_edit.text.toString().trim()
@@ -41,16 +42,16 @@ class RegisterActivity : AppCompatActivity() {
         var password_repeat = register_password_repeat_edit.text.toString().trim()
 
         if( nome.isEmpty() || nome.equals("")){
-            register_name_edit.error = "Preencha o nome"
+            register_name_edit.error = getString(R.string.preenchaNome)
         }else
         if( email.isEmpty() || email.equals("")){
-            register_email_edit.error = "Preencha o email"
+            register_email_edit.error = getString(R.string.preenchaEmail)
         }else
         if( password.isEmpty() || password.equals("")){
-            register_password_edit.error = "Preencha o password"
+            register_password_edit.error = getString(R.string.preenchaSenha)
         }else
         if( password_repeat.isEmpty() || password_repeat.equals("")){
-            register_password_repeat_edit.error = "Repita o password"
+            register_password_repeat_edit.error = getString(R.string.preenchaSenhaRepetida)
         }
         else{
             if( password.equals(password_repeat) ){
@@ -59,7 +60,7 @@ class RegisterActivity : AppCompatActivity() {
                 startActivity( intent )
                 finish()
             }else{
-                register_password_repeat_edit.error = "As senhas estão diferentes"
+                register_password_repeat_edit.error = getString(R.string.senhasDiferentes)
             }
         }
     }
