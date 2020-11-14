@@ -34,11 +34,11 @@ class AdaptadorDetalhe(lista:ArrayList<Food>, var clickListener: ClickListener, 
 
         holder.bind( food )
         //holder.imagemView.setImageResource( anuncio.imagem )
-        holder.itemView.setOnClickListener {
-            val intent = Intent(context, DetalheCardapioActivity::class.java )
-
-
-        }
+//        holder.itemView.setOnClickListener {
+//            val intent = Intent(context, DetalheCardapioActivity::class.java )
+//
+//
+//        }
     }
 
     override fun getItemCount(): Int {

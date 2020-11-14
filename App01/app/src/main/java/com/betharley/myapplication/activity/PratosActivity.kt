@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -47,7 +48,7 @@ class PratosActivity : AppCompatActivity() {
         adaptadorFood = AdaptadorDetalhe(listaFood, object: ClickListener {
             override fun onClick(view: View, position: Int) {
                 var food: Food = listaFood.get(position)
-                //Toast.makeText(applicationContext, ""+anuncio.titulo, Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, ""+anuncio.titulo, Toast.LENGTH_SHORT).show()
                 var intent: Intent = Intent(applicationContext, DetalheCardapioActivity::class.java)
                 intent.putExtra(getString(R.string.FOOD), food)
                 startActivity( intent )
